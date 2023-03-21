@@ -66,11 +66,4 @@ const teamStructure = {
     name: "Bill gates",
     teams: [],
 },
-{
-    name: "",
-    teams: [],
-},
-{
-    name: "",
-    teams: [],
-},
+
