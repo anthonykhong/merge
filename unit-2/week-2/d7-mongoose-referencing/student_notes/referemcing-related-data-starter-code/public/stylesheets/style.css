@@ -11,51 +11,51 @@ body {
   grid-template-rows: 50px 1fr;
   grid-template-areas:
     "nav"
-    "main"
+    "main";
 }
 
-body>nav {
+body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #b8c0c2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
 }
 
-nav>img {
+nav > img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
 }
 
-body>main {
+body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: #e8eceb;
   padding: 20px;
   overflow-y: scroll;
 }
 
-body>main h1:first-child {
+body > main h1:first-child {
   margin-bottom: 50px;
 }
 
-nav>a {
+nav > a {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
 }
 
-nav>a:hover:not(.active) {
+nav > a:hover:not(.active) {
   color: white;
   background-color: #424748;
 }
 
-nav>a.active {
+nav > a.active {
   color: white;
   cursor: default;
 }
@@ -100,7 +100,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: #b8c0c2;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -130,4 +130,14 @@ table td {
   width: 8rem;
   grid-column: 2 / 3;
   margin-bottom: 2rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-weight: bold;
 }
