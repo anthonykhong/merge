@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import ToDoList from './components/ToDoList/ToDoList'
-
-// Add the todos array
-const todos = [
-  'Have Fun with BTY',
-  'Learn React with BTY',
-  'Learn the MERN-Stack BTY'
-];
+import { useState } from "react";
+import "./App.css";
+import ToDoList from "./components/ToDoList/ToDoList";
 
 function App() {
+  const [todos, setTodos] = useState([
+    "Have Fun",
+    "Learn React",
+    "Learn the MERN-Stack",
+  ]);
 
   const [showTodos, setShowTodos] = useState(true);
 
@@ -19,7 +17,7 @@ function App() {
       {/* Pass todos as a prop */}
       {showTodos && <ToDoList todos={todos} />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
