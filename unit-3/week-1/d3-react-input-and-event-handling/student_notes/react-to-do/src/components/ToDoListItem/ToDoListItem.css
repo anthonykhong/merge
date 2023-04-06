@@ -1,8 +1,10 @@
 .ToDoListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 4vmin;
   padding: 2vmin;
   border: 1vmin solid purple;
   list-style: none;
   font-size: 6vmin;
 }
-
