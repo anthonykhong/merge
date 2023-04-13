@@ -18,16 +18,16 @@ Mounting:
 
 Updating:
     -If a prop that comes into the component changes 
-    -it will cause the component to re-render
+     it will cause the component to re-render
     -If the component has a state variable that is updated
-    -the component will re-render and update
+     the component will re-render and update
 
 
 Unmounting:
     -When you no longer want to show a component
     -When the component is hidden
     -When you navigate to a different page where the 
-    -component is no longer shown 
+     component is no longer shown 
 
 Imagine we have a button that hides and shows
 a component, mounting happens every time we click the
@@ -55,8 +55,9 @@ useEffect:
 
 useEffect is a hook in React that lets you perform side effects in 
 function components. Side effects include things like fetching data from an API, 
-setting up event listeners, or updating the document title. 
-UseEffect runs after every render of the component, unless otherwise,
+setting up event listeners, or updating DOM elements. 
+
+UseEffect runs after every render of the component, unless otherwise
 specified and can optionally be set up to run only when certain state or 
 props change.
 
@@ -80,7 +81,7 @@ first mounts. If the array contains one or more values, the effect runs whenever
 one of those values, or dependencies changes.  We can have multiple values in our
 dependency array.  We can also have multiple use effects. 
 
-useEffect a function that you pass another function into to run 
+useEffect is a function that you pass another function into to run 
 at specific stages of a components life-cycle 
 
 Let's look at an example in Counter.jsx 
@@ -107,9 +108,13 @@ should all be called synchronously, not asynchronously.
 
 useRef: 
 
-The main use case of useRef is to store references to DOM elements without 
-causing a re-render of the entire page.  This is because manipulating an element directly 
-using getElementById causes a re-render of the entire page.
+useRef is used to persist non-state data in React apps through re-renders 
+of a component. 
+
+In the state lesson we talked about how regular variables are destroyed between
+re-renders and we need some kind of state, or other hook to persist them. 
+
+It allows us to keep data around that we don't necessarily want to save in state.
 
 useRef returns a mutable object whose '.current' property is initialized 
 to the passed argument (initial value).
@@ -119,16 +124,12 @@ directly mutated.
 
 useRef does not trigger a re-render. 
 
-It can be used for non-state data as well.  
-
 Understand two things about useRef: 
 
 First, it returns an object with a .current property that can be directly 
-mutated unlike useState in which we must use a special setter function
+mutated unlike useState in which we must use a special setter function.
 
-Two, it never re-renders the Dom element aka component 
-
-You can use use-ref to persist data as well, which is the way we'll be using it. 
+Two, it never re-renders the component.
 
 When used to manipulate non-state data, UseEffect is considered an "escape hatch" 
 from the way React likes to do things with state.  Sometimes we have data that 
@@ -142,11 +143,12 @@ For a more practical real-world use case let's look at TimerTwo.jsx.
 We'll also see an example of this in Jim's video lesson.
 
 We should be careful of these using useRef for this kind of useCase, 
-because more often we will always store data as state.  
+because more often we will store data as state.  
 If you think you need a useRef, make sure you have exhausted all 
-possibilities of how your app can be designed with state instead.  
+possibilities of how your app can be designed with state instead.  useRef
+is what is known as an anti-pattern in the context of React.   
 
-In Jim's lesson we don't see the first use case for useRef, so make 
-sure to look into using use ref to directly refer to the dom elements 
-on your own. 
-
+Another use case useRef is to store references to DOM elements and
+manipulate them directly without causing a re-render of the entire page. 
+We'll not discuss this now, but just know it's out there and do some 
+research on your own. 
