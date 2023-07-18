@@ -4,6 +4,8 @@
 
 This will be your shared class repo! Guides, in-class labs and code samples, and other resources will live here.
 
+Kenjamin | Skat Master Matt | Evan the Slot Machine | Panye West
+
 ### Contents
 
 - Course Dates and Holidays
